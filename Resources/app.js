@@ -79,7 +79,7 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 	
 	
 	var button = Ti.UI.createButton({
-		title:'Get value'
+		title:'Get value' 
 	});
 	
 	button.addEventListener('singletap', function(e) {
