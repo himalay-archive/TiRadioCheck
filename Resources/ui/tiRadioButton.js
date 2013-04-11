@@ -6,7 +6,7 @@ exports.createGroup = function(arg) {
 		height:arg.height,
 		groupId: arg.groupId,
 		layout:'horizontal',
-		top:20
+		top:20,
 	});
 
 	//// Looping through radio buttons that will be created inside the radioGroup. 
@@ -38,6 +38,7 @@ exports.createGroup = function(arg) {
     			if(i === e.source.id)
     			{
     				_parent.children[i].setImage(arg.radioItemsBackgroundSelectedImage);
+    				_parent.selectedValue = i;
     			}
     			else{
     				_parent.children[i].setImage(arg.radioItemsBackgroundImage);	
@@ -48,8 +49,6 @@ exports.createGroup = function(arg) {
 		//// Adding radio button to our main object/container/holder
 		self.add(radioItem);
 	}
-	
-	
 
 	//// Returning the main object that contains radio buttons. 
 	return self;
