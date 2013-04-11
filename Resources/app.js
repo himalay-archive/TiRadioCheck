@@ -1,8 +1,8 @@
-Titanium.UI.setBackgroundImage('iphone/Default.png');
+Titanium.UI.setBackgroundImage('/iphone/Default.png');
 
 (function() {
 		
-	var radioButton	= require('ui/tiRadioButton');
+	var radioButton	= require('/ui/tiRadioButton');
 		
 	
 	var win = Ti.UI.createWindow({
@@ -47,8 +47,8 @@ Titanium.UI.setBackgroundImage('iphone/Default.png');
 		layout:'horizontal',
 		radioItemsValue:['One', 'Two', 'Three'],
 		radioItemsPadding:10,
-		radioItemsBackgroundSelectedImage:'/iphone/radioButtonActive.png',
-		radioItemsBackgroundImage:'/iphone/radioButton.png',
+		radioItemsBackgroundSelectedImage:'/assets/radioButtonActive.png',
+		radioItemsBackgroundImage:'/assets/radioButton.png',
 		radioItemsWidth:33,
 		radioItemsHeight:34
 	});
@@ -69,8 +69,8 @@ Titanium.UI.setBackgroundImage('iphone/Default.png');
 		layout:'vertical',
 		radioItemsValue:['One', 'Two', 'Three'],
 		radioItemsPadding:10,
-		radioItemsBackgroundSelectedImage:'/iphone/radioButtonActive.png',
-		radioItemsBackgroundImage:'/iphone/radioButton.png',
+		radioItemsBackgroundSelectedImage:'/assets/radioButtonActive.png',
+		radioItemsBackgroundImage:'/assets/radioButton.png',
 		radioItemsWidth:33,
 		radioItemsHeight:34
 	});	
@@ -81,10 +81,9 @@ Titanium.UI.setBackgroundImage('iphone/Default.png');
 	});
 	
 	button.addEventListener('singletap', function(e) {
-    		alert("Horizontal radio group: " + radioGroup.selectedValue + "\n Vertical radio group: " + radioGroup2.selectedValue);
-		});
-	
-	
+		alert("Horizontal radio group: " + radioGroup.selectedValue + "\n Vertical radio group: " + radioGroup2.selectedValue);
+	});
+		
 	win.add(headline);
 	win.add(text);
 	win.add(headline2);
