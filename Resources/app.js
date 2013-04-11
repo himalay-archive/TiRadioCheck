@@ -67,7 +67,9 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 		width:34,
 		height:150,
 		layout:'vertical',
-		radioItemsValue:['One', 'Two', 'Three'],
+		radioItemsValue:['One', 'Two', 'Three'],/*
+			
+		*/
 		radioItemsPadding:10,
 		radioItemsBackgroundSelectedImage:'/assets/radioButtonActive.png',
 		radioItemsBackgroundImage:'/assets/radioButton.png',
@@ -81,7 +83,7 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 	});
 	
 	button.addEventListener('singletap', function(e) {
-		alert("Horizontal radio group: " + radioGroup.selectedValue + "\n Vertical radio group: " + radioGroup2.selectedValue);
+		alert("Horizontal radioGroup selectedIdx: " + radioGroup.selectedValue + "\n Vertical radioGroup selectedIdx: " + radioGroup2.selectedValue);
 	});
 		
 	win.add(headline);
