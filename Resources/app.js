@@ -42,8 +42,8 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 	
 	var radioGroup = radioButton.createGroup({
 		groupId:1,
-		width:119,
-		height:34,
+		width:320,
+		height:60,
 		layout:'horizontal',
 		radioItemsValue:['One', 'Two', 'Three'],
 		radioItemsPadding:10,
@@ -64,10 +64,10 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 	});		
 	var radioGroup2 = radioButton.createGroup({
 		groupId:1,
-		width:34,
+		width:150,
 		height:150,
 		layout:'vertical',
-		radioItemsValue:['One', 'Two', 'Three'],/*
+		radioItemsValue:['Top', 'Middle', 'Lower'],/*
 			
 		*/
 		radioItemsPadding:10,
@@ -79,7 +79,7 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 	
 	
 	var button = Ti.UI.createButton({
-		title:'Get value' 
+		title:'Get value', top: 20
 	});
 	
 	button.addEventListener('singletap', function(e) {

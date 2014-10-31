@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="acs-oauth-secret-production" type="string">WEePcfNhFn85OBoArLTzPTLIC98fTy1Y</property>
-    <property name="acs-oauth-key-production" type="string">ovhJtw4hX8YjZGIf7VPSI0AIh6j8gjsT</property>
-    <property name="acs-api-key-production" type="string">FTP2Vy54iAyCoO7Es9k8fr6CmEoL9OBE</property>
-    <property name="acs-oauth-secret-development" type="string">pLEoVXUfg21tIhAkP70Vi03grOdiSlTL</property>
-    <property name="acs-oauth-key-development" type="string">p9D7dZgNYaxYkohQVr8yLn31cgkoC75e</property>
-    <property name="acs-api-key-development" type="string">KnDBcUw8mL4ERFzD3ch0QAZrzkGpiKtO</property>
     <deployment-targets>
         <target device="mobileweb">false</target>
         <target device="iphone">true</target>
@@ -13,14 +7,14 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <sdk-version>2.1.3.GA</sdk-version>
-    <id>nu.lukic.tiradiobuttongroup</id>
+    <sdk-version>3.4.0.GA</sdk-version>
+    <id>ca.underlabs.tiRadioBtn</id>
     <name>TiRadioButtonGroup</name>
-    <version>1.1</version>
-    <publisher>Srdjan</publisher>
-    <url>http://www.lukic.nu</url>
-    <description>not specified</description>
-    <copyright>2012 by Srdjan</copyright>
+    <version>1.2</version>
+    <publisher>Yozef</publisher>
+    <url>http://underlabs.ca</url>
+    <description>sample on using a RadioButton</description>
+    <copyright>2012 by Underlabs</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
@@ -51,7 +45,5 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
-    <modules>
-        <module platform="commonjs" version="2.3.0">ti.cloud</module>
-    </modules>
+    <modules/>
 </ti:app>
