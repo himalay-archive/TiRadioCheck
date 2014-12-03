@@ -1,15 +1,24 @@
 exports.createGroup = function(arg) {
     
-    var isVertical = arg.layout ==='vertical';
-    
     //// Main object that will be returned when createGroup is called.
     var self = Ti.UI.createView({
         width:Ti.UI.SIZE,
         height:Ti.UI.SIZE,
-        groupId: arg.groupId,
-        layout:arg.layout,
         top:20, // You can remove (just padding from the main window vertical layout)
     });
+    
+    self.reset = function() {
+        if (self.children[self.selectedValue]) { // has a selected value
+            self.children[self.selectedValue].children[0].setImage(arg.radioItemsBackgroundImage);
+            self.selectedValue = null;
+        }
+    };
+    
+    self.groupId = arg.groupId;
+    self.layout = arg.layout;
+    
+    var isVertical = arg.layout ==='vertical';
+    
 
     //// Looping through radio buttons that will be created inside the radioGroup. 
     for(var i = 0, count = arg.radioItemsValue.length; i<count; i++){
@@ -71,7 +80,7 @@ exports.createGroup = function(arg) {
         //// Adding radio button to our main object/container/holder
         self.add(radioLabelView);
     }
-
+    
     //// Returning the main object that contains radio buttons. 
     return self;
 };

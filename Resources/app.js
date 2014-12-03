@@ -1,12 +1,9 @@
-Titanium.UI.setBackgroundImage('/iphone/Default.png');
-
 (function() {
 		
 	var radioButton	= require('/ui/tiRadioButton');
-		
 	
 	var win = Ti.UI.createWindow({
-		layout:'vertical'
+		layout:'vertical',
 	});
 	
 	var headline = Ti.UI.createLabel({
@@ -27,7 +24,7 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 		shadowColor:'#000',
 		shadowOffset:{x:1,y:1},
 		textAlign:'center',
-		top:10
+		top:15
 	});
 	
 	var headline2 = Ti.UI.createLabel({
@@ -36,7 +33,7 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 		font:{fontSize:20,fontWeight:'Bold'},
 		shadowColor:'#000',
 		shadowOffset:{x:1,y:1},
-		top:10,
+		top:15,
 		textAlign:'center'
 	});	
 	
@@ -59,7 +56,7 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 		font:{fontSize:20,fontWeight:'Bold'},
 		shadowColor:'#000',
 		shadowOffset:{x:1,y:1},
-		top:10,
+		top:15,
 		textAlign:'center'
 	});		
 	var radioGroup2 = radioButton.createGroup({
@@ -81,9 +78,16 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 	var button = Ti.UI.createButton({
 		title:'Get value', top: 20
 	});
-	
 	button.addEventListener('singletap', function(e) {
 		alert("Horizontal radioGroup selectedIdx: " + radioGroup.selectedValue + "\n Vertical radioGroup selectedIdx: " + radioGroup2.selectedValue);
+	});
+
+	var reset = Ti.UI.createButton({
+		title:'Reset', top: 15
+	});
+	reset.addEventListener('singletap', function(e) {
+		radioGroup.reset();
+		radioGroup2.reset();
 	});
 		
 	win.add(headline);
@@ -94,6 +98,7 @@ Titanium.UI.setBackgroundImage('/iphone/Default.png');
 	win.add(radioGroup2);
 	
 	win.add(button);
+	win.add(reset);
 	win.open();
 
 })();
