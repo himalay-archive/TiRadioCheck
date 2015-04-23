@@ -1,5 +1,5 @@
-var createRadoCheck = require('radioCheck');
-var listVHgroup = createRadoCheck.createGroup({
+var createCheck = require('radioCheck');
+var listVHgroup = createCheck.createGroup({
     checkBox: 'yes',
     hidLabels: 'no',
     itemActiveImage: '/images/checkActive.png',
@@ -16,8 +16,10 @@ var listVHgroup = createRadoCheck.createGroup({
     layout: 'vertical'
 });
 $.checkboxgrp.add(listVHgroup);
+$.checkboxgrp.height = $.checkboxgrp.children.height; //this is optional. Use ScrollView with custom height if you have big list.
 
-var radioList = createRadoCheck.createGroup({
+var createRado = require('radioCheck');
+var radioList = createRado.createGroup({
     checkBox: 'no',
     hidLabels: 'no',
     itemActiveImage: '/images/radioActive.png',
@@ -34,9 +36,10 @@ var radioList = createRadoCheck.createGroup({
     layout: 'vertical'
 });
 $.radiogrp.add(radioList);
-// event listeners
+$.radiogrp.height =$.radiogrp.children.height;
+
 $.showMeBtn.addEventListener('click', function(e) {
-    alert("Checkbox values:\n" + listVHgroup.selectedValues.join("\n") + "\n\nRadiobutton value: " + radioList.selectedValues);
+    alert('Checkbox values:\n' + listVHgroup.selectedValues.join('\n') + '\n\nRadiobutton value: ' + radioList.selectedValues);
 });
 
 $.index.open();

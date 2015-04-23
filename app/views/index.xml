@@ -1,7 +1,15 @@
 <Alloy>
 	<Window>
-		<View id="checkboxgrp" class="myHeight bg-red" />
-		<View id="radiogrp" class="myHeight bg-red" />
-		<Button id="showMeBtn">Show me</Button>
+		<ScrollView class="scv">
+		<View class='top-10'>
+			<Label>An example of checkbox with Preselected and Disabled values</Label>
+		<ScrollView id="checkboxgrp"></ScrollView>
+		</View>
+		<View class='top-10'>
+			<Label>An example of radiobutton with Preselected and Disabled value</Label>
+		<ScrollView id="radiogrp"></ScrollView>
+		</View>
+		<Button id="showMeBtn" class='top-10'>Show me</Button>
+	</ScrollView>
 	</Window>
 </Alloy>

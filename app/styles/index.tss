@@ -1,10 +1,27 @@
-"Window": {
-	backgroundColor:'#fff'
+'Label[platform=android]': {
+    color: '#000' // all platforms except Android default to black 
 }
-"View": {
-	backgroundColor:'#fff',
-	top: 10
+ 
+'Window': {
+    backgroundColor: '#fff', // white background instead of default transparent
+    layout:'vertical'
 }
-"Label": {
-	top: 20
+ 
+'Window[platform=android]': {
+    modal: false // make android windows all heavyweight
+}
+'View': {
+    backgroundColor: '#fff', // white background instead of default transparent
+    	layout:'vertical'
+}
+'ImageView[platform=ios]': {
+    preventDefaultImage: true // never show ugly image while loading remote
+}
+'.top-10':{
+	top:10,
+}
+'.scv':{
+	height:"500",
+	width: '98%',
+	top: 25
 }
