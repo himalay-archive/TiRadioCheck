@@ -1,1 +1,22 @@
-Place your change log text here.  This file will be incorporated with your app at package time.
+#############
+WHAT'S NEW??
+#############
+
+
+
+## TiRadioCheck V.1 //23 Apr 2015// ##
+
+* CheckBox option added
+
+* Added option to hide/show the Labels
+
+* Now you can have Preselected items
+
+* You can also throw some Disabled items
+
+* And you get reasults as an array of Labels 
+
+* Also includes all the features from yozef/TiRadioButtonGroup
+
+
+## https://github.com/himalay/TiRadioCheck

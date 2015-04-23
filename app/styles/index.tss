@@ -1,0 +1,10 @@
+"Window": {
+	backgroundColor:'#fff'
+}
+"View": {
+	backgroundColor:'#fff',
+	top: 10
+}
+"Label": {
+	top: 20
+}

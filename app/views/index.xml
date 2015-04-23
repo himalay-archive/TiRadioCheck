@@ -1,0 +1,7 @@
+<Alloy>
+	<Window>
+		<View id="checkboxgrp" class="myHeight bg-red" />
+		<View id="radiogrp" class="myHeight bg-red" />
+		<Button id="showMeBtn">Show me</Button>
+	</Window>
+</Alloy>
