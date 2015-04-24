@@ -1,42 +1,45 @@
-var createCheck = require('radioCheck');
-var listVHgroup = createCheck.createGroup({
+var createRadioCheck = require('radioCheck');
+var listVHgroup = createRadioCheck.createGroup({
     checkBox: 'yes',
     hidLabels: 'no',
     itemActiveImage: '/images/checkActive.png',
     itemInactiveImage: '/images/check.png',
     itemDisabledImage: '/images/checkDisabled.png',
     itemLabelFont: {},
-    itemsPadding: 10,
-    itemsHeight: 24,
-    itemsWidth: 24,
+    itemPadding: 10,
+    itemHeight: 24,
+    itemWidth: 24,
     itemValues: ['Separated', 'By Commas', 'Selected', 'Disabled'],
-    selectedValues: ['Selected', 'Item'],
+    selectedValues: ['Selected'],
     disabledValues: ['I am', 'Disabled'],
-    itemsViewLayout: 'horizontal',
-    layout: 'vertical'
+    labelFontColor: '#000',
+    itemViewLayout: 'horizontal',
+    layout: 'vertical',
+    top: 0,
+    bottom: 0
 });
 $.checkboxgrp.add(listVHgroup);
-$.checkboxgrp.height = $.checkboxgrp.children.height; //this is optional. Use ScrollView with custom height if you have big list.
+$.checkboxgrp.height=$.checkboxgrp.children[0].height; // if you have long list, you might wanna use scrollview with a another height.
 
-var createRado = require('radioCheck');
-var radioList = createRado.createGroup({
+var radioList = createRadioCheck.createGroup({
     checkBox: 'no',
     hidLabels: 'no',
     itemActiveImage: '/images/radioActive.png',
     itemInactiveImage: '/images/radio.png',
-    itemDisabledImage: '/images/radioDisabled.png',
+    //    itemDisabledImage: '/images/radioDisabled.png', //only for checkbox.
     itemLabelFont: {},
-    itemsPadding: 10,
-    itemsHeight: 24,
-    itemsWidth: 24,
-    itemValues: ['Separated', 'By Commas', 'Selected', 'Disabled'],
+    itemPadding: 10,
+    itemHeight: 24,
+    itemWidth: 24,
+    itemValues: ['Separated', 'By Commas', 'Selected'],
     selectedValues: ['Selected'],
-    disabledValues: ['Disabled'],
-    itemsViewLayout: 'horizontal',
+    //    disabledValues: [], //only for checkbox.
+    labelFontColor: '#000',
+    itemViewLayout: 'horizontal',
     layout: 'vertical'
 });
 $.radiogrp.add(radioList);
-$.radiogrp.height =$.radiogrp.children.height;
+$.radiogrp.height=$.radiogrp.children[0].height; // if you have long list, you might wanna use scrollview with a another height.
 
 $.showMeBtn.addEventListener('click', function(e) {
     alert('Checkbox values:\n' + listVHgroup.selectedValues.join('\n') + '\n\nRadiobutton value: ' + radioList.selectedValues);

@@ -1,0 +1,35 @@
+"Window":{
+    layout: 'vertical',
+    backgroundColor: '#ffffff'
+}
+"View":{
+    layout: 'vertical',
+    color: '#ffffff'
+}
+"ScrollView":{
+    layout: 'vertical',
+    color: '#ffffff'
+}
+"Label":{
+    font: {
+        fontFamily: 'HelveticaNeue-Light',
+        fontSize: '14dp',
+    },
+    color: '#333333',
+    left: 10,
+    top:20
+}
+"Button":{
+    font: {
+        fontFamily: 'HelveticaNeue-Light', 
+        fontSize: '14dp'
+    },
+    height: '44dp',
+    width: '100%',
+    backgroundColor: '#428bcf',
+    color: '#fff',
+    top: 20
+}
+".t-40":{
+    top:40
+}

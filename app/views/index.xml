@@ -1,15 +1,11 @@
 <Alloy>
 	<Window>
 		<ScrollView class="scv">
-		<View class='top-10'>
-			<Label>An example of checkbox with Preselected and Disabled values</Label>
-		<ScrollView id="checkboxgrp"></ScrollView>
-		</View>
-		<View class='top-10'>
-			<Label>An example of radiobutton with Preselected and Disabled value</Label>
-		<ScrollView id="radiogrp"></ScrollView>
-		</View>
-		<Button id="showMeBtn" class='top-10'>Show me</Button>
+		<Label class="t-40">An example of CheckBox group with Preselected and Disabled values</Label>
+		<View id="checkboxgrp" />
+		<Label>An example of RadioButton group with Preselected value</Label>
+		<View id="radiogrp" />
+		<Button id="showMeBtn">Show Me</Button>
 	</ScrollView>
 	</Window>
 </Alloy>
