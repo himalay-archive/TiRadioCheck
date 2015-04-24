@@ -49,4 +49,6 @@ plugins/
 build
 android/
 iphone/
+Resources/
+.settings
 mobileweb/
